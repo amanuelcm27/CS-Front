@@ -1,0 +1,120 @@
+.overlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+  overflow: scroll;
+}
+.overlay-box {
+  width: 50%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 2px 2px 5px #eeeeee;
+  animation: scaleBox 0.3s ease-in-out 0s 1;
+}
+
+
+
+@keyframes scaleBox {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.overlay-poster {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  background-color: #eeeeee;
+  background-size: cover;
+}
+.upload-icon {
+  text-align: center;
+  padding: 10%;
+  background-color: rgba(244, 244, 244, 0.3);
+}
+.fa-upload {
+  color: black;
+  font-size: 5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-upload:hover {
+  animation: bounce 1s ease-in-out 0.3s infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.event-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  padding:10px;
+}
+
+.event-inputs {
+  border-radius: 10px;
+  width: 100%;
+  margin: 20px 0;
+}
+.event-inputs h2{
+  margin: 10px;
+}
+input.event-input,
+textarea.event-desc {
+  width: 90%;
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+textarea.event-desc {
+  resize: none;
+  height: 200px;
+}
+
+.create-event-btn {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 20%;
+  border: none;
+  color: white;
+  background-color: rgb(0, 0, 0);
+}
+.create-event-btn:hover {
+  background-color: rgb(60, 60, 60);
+}
+.host-choices {
+  display: inline;
+  list-style: none;
+}
+.host-choices li {
+  display: inline;
+  background-color:rgb(231, 229, 229);
+  padding: 5px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.host-choices li:hover {
+  background-color: #ac95e6;
+}

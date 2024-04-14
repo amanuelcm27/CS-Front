@@ -1,0 +1,136 @@
+.current-events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search-section {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-section input {
+  padding: 8px;
+  margin-right: 8px;
+  width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-section button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.search-section button:hover {
+  background-color: #615f5f;
+  transform: scale(1.05);
+}
+.search-section button:active {
+  background-color: #615f5f;
+  transform: scale(0.95);
+}
+
+.filters button {
+  padding: 9px 17px;
+  margin-right: 4px;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background-color: #e0e0e0;
+}
+.filters button:active {
+  background-color: #e0e0e0;
+  transform: scale(0.95);
+}
+
+.add-event-btn {
+  position: absolute;
+  right:0;
+  padding: 10px;
+  margin:20px;
+  border-radius: 5px;
+  border:none;
+  background-color: black;
+  color:white;
+}
+.add-event-btn:hover {
+  background-color: rgb(41, 41, 41);
+  border:0.5px solid;
+}
+
+.event_card {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 16px;
+  margin-bottom: 16px;
+  margin-top: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  width: 60%;
+  height: 250px;
+  transition: all 0.3s ease-in;
+}
+
+.event_card:hover {
+  cursor: pointer;
+  transform: translateY(-2%);
+}
+
+.event_card img {
+  flex: 0 0 120px; /* fixed width for image */
+  height: auto;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+
+.event_detail {
+  flex: 1; /* takes up remaining space */
+}
+
+h3 {
+  color: #333;
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.event_card p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 4px 0;
+}
+
+.voting {
+  display: flex;
+  align-items: center;
+  margin-top: 200px;
+  gap: 10px;
+}
+
+.voting button {
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.voting button:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+.voting button:active {
+  background-color: #e0e0e0;
+  transform: scale(0.95);
+}

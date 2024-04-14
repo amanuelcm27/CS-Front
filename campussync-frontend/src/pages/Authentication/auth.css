@@ -1,0 +1,109 @@
+.auth-container {
+  width: 90%;
+  margin: 10px auto;
+}
+.auth-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.auth-left,
+.auth-right {
+  width: 50%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.auth-right-pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 0px 0px 20px;
+  object-fit: cover;
+  animation: fadeIn 1s ease-in 0s 1 ;
+
+}
+.sign-up-title {
+  font-family: var(--font-family);
+  font-size: 2.2rem;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+}
+.signup-form {
+  margin: 20px;
+}
+.signup-input {
+  display: block;
+  width: 80%;
+  outline: none;
+  padding: 20px;
+  margin-left: 5px;
+  border: none;
+  background-color: none;
+  font-family: var(--font-family);
+}
+.signup-input:focus {
+    border-bottom: 1px solid red;
+
+}
+.register-btn {
+  color: rgb(255, 255, 255);
+  background-color: rgb(88, 88, 255);
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  width: 80%;
+  margin: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+@media only screen and (max-width: 760px) {
+  .auth-right {
+    display: none;
+  }
+  .auth-left {
+    width: 100%; 
+  }
+}
+.signup-input-container {
+  position: relative;
+}
+
+.signup-input-container i {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.error-container {
+  width: 80%;
+  margin: 10px;
+  border:1px solid red;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  padding: 10px;
+  color:red;
+  background-color: rgba(251, 16, 16, 0.2);
+}
+label {
+  color:rgb(152, 151, 151);
+  font-size: 0.6rem;
+}
+.signin-btn {
+  padding: 15px; border-radius: 5px; 
+  background: rgb(83, 83, 225);
+  border:1px solid white;
+  color: white;
+}
+.signin-btn:hover{
+  background-color: rgb(95, 95, 247);
+}

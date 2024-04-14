@@ -1,0 +1,45 @@
+
+  .host-card {
+    width: 450px;
+    height: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    margin:10px;
+    transition:all .5s ease-in-out;
+  }
+  .host-card:hover {
+    transform: translateY(-5%);
+    box-shadow: 2px 2px 15px #3d3d3d;
+
+
+  }
+  .overlay-content {
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    color: #ffffff; 
+    width: 100%; 
+    padding: 10px 0; /* Add some padding for spacing */
+  }
+  
+  .card-title {
+    margin-top: 10%;
+    font-size: 24px; 
+    margin-bottom: 10px; 
+  }
+  
+
+  
+  /* Responsive layout for smaller screens */
+  @media (max-width: 600px) {
+    .card-container {
+      width: 300px; 
+      margin: 20px; 
+    }
+  }
+ 
+  

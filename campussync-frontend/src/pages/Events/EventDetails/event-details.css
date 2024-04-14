@@ -1,0 +1,240 @@
+/* .details-container {
+  width: 100%;
+  height: 100%;
+}
+
+.details-content {
+  width: 98%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  margin: 10px;
+}
+
+.details-container h1 {
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: start;
+  width: 100%;
+}
+
+.details-address-detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.details-description {
+  width: 40%;
+  box-shadow: 0 5px 10px -2px black;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.details-description p {
+  line-height: 30px;
+}
+
+.details-address {
+  width: 40%;
+  box-shadow: 0 5px 10px -2px black;
+  border-radius: 10px;
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.details-address button {
+  width: 45%;
+  height: 60px;
+  background-color: transparent;
+  color: rgb(80, 79, 79);
+  box-shadow: 0 5px 10px -2px black;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: "Trebuchet MS";
+  border: none;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  margin-left: 200px;
+}
+
+.details-address button:hover {
+  background-color: #f0f0f0; 
+  color: #000; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.details-address button:focus {
+  background-color: #f0f0f0; 
+  color: #000; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.details-comment {
+  margin-left: 150px;
+  width: 75%;
+  height: 50px;
+  border: 1px groove grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5px;
+}
+
+.details-comment input {
+  border: none;
+  width: 90%;
+  height: 40px;
+  font-size: 20px;
+  color: rgb(161, 158, 158);
+  padding-right: 30px;
+  padding-left: 20px;
+  font-family: "Trebuchet MS";
+}
+
+.details-comment input:focus {
+  outline: none;
+}
+
+.details-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.details-image {
+  width: 100%;
+  height: 600px;
+  box-shadow: 0 5px 10px -2px black;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.d-d {
+  width: 100%;
+  height: 100%;
+} */
+.detail-container {
+  width: 100%;
+}
+.detail-header{
+  width: 100%;
+  height: 500px;
+  background-image: url('../../cod.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.detail-side {
+  backdrop-filter: blur(18px);
+  background-color: rgba(0,0,0,0.4);
+  width: 50%;
+  height: 100%;
+  margin-left:auto;
+}
+.detail-description{
+  width:100%;
+  height: 220px;
+  padding:10px;
+  padding-top: 30px;
+  overflow-y: scroll;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.detail-description div{ 
+  padding-right: 10px;
+  margin-right: 20px;
+  text-align: justify;
+  color:white;
+}
+.detail-desc-head {
+  font-size: 2rem;
+  padding:20px;
+  padding-left: 0px;
+  color:white;
+}
+.detail-box {
+  margin:10px;
+  color: white;
+}
+.detail-box-2 {
+  margin:10px;
+  display: flex;
+  flex-direction: column; 
+}
+.detail-box-2 span {
+  margin: 5px;
+}
+.rsvp-btn {
+  padding:15px;
+  width: 20%;
+  background-color: rgb(47, 106, 243);
+  color: white;
+  border:none;
+  border-radius: 10px;
+}
+.rsvp-btn:hover {
+  background-color: rgb(69, 84, 246);
+}
+.comments-container {
+  width: 80%;
+  margin :10px auto;
+  padding:20px;
+}
+.comment-card-container {
+  width:100%;
+}
+.comment-card {
+  width: 100%;
+  box-shadow: 2px 2px 5px rgb(190, 190, 190);
+  margin-top: 10px;
+}
+.comment-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding:10px;
+}
+.comment-head {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  color: rgb(95, 95, 95);
+}
+.comment-form {
+  display: flex;
+  align-items: center;
+}
+.comment-text {
+  width: 80%;
+  padding:15px 15px;
+  border-radius: 10px;
+  border:1px solid
+}
+.comment-btn {
+  margin:15px;
+  padding: 7px;
+  background: none;
+  border: 1px solid;
+  font-size: 1.3rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.comment-btn:hover {
+  color:white;
+  background-color: black;
+}
+.comment-data {
+  font-size: 1.2rem;
+  padding:10px;
+  text-align: justify;
+  margin-left: 50px;
+  color: rgb(34, 34, 34);
+}

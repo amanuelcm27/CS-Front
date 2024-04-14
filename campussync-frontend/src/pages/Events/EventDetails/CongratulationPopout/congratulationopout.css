@@ -1,0 +1,54 @@
+.congra-cont {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+}
+.congratulation-popout {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  animation: popOut 0.3s ease-in-out forwards;
+}
+
+.congratulation-popout h2 {
+  margin-bottom: 10px;
+}
+
+.congratulation-popout p {
+  margin-bottom: 20px;
+}
+
+.congratulation-popout button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.congratulation-popout button:hover {
+  background-color: #0056b3;
+}
+
+/* Animation for pop-out effect */
+@keyframes popOut {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

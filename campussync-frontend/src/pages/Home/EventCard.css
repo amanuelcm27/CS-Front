@@ -1,0 +1,35 @@
+.event-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 300px;
+    display: flex; /* Add this line */
+    flex-direction: column; /* Add this line */
+    margin: 20px;
+    transition: all 0.5s ease-in-out;
+  }
+  .event-card:hover {
+    transform: translateY(-5%)
+  }
+  .event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .event-card h3, .event-card p {
+    margin: 10px 15px; /* Adjust the margin and add padding */
+  }
+  
+  .time, .location, .posted-by {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  .event-info {
+    transition: all 0.5s ease-in-out;
+  }
+  .event-info:hover {
+    background-color: rgba(205, 205, 205, 0.6);
+   }
