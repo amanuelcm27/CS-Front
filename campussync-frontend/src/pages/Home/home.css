@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     height: auto; 
-    background-image: url('event.jpg');
+    background-image: url('../../../public/event.jpg');
     background-repeat: no-repeat; 
     background-size: cover;
     background-position: center;
