@@ -175,21 +175,31 @@ const CurrentEvents = () => {
 
         {loading ? (
           <img src="loading.gif" alt="Loading..." />
-        ) :
-         filteredEvents.length > 0 ? (
+        ) : filteredEvents.length > 0 ? (
           filteredEvents.map((event, index) => (
             <div key={event.id} className="event_card">
-              <img
-                src={event.poster}
-                style={{ width: "400px", height: "100%" }}
-                alt={event.title}
-              />
+              <div>
+                <img
+                  src={event.poster}
+                  style={{ width: "400px", height: "100%", objectFit:"conver"}}
+                  alt={event.title}
+                />
+              </div>
+
               <div className="event_detail">
                 <Link to={`/event-detail/${event.id}/`}>
                   <h3>{event.name}</h3>
-                  <p><i className="fa-solid fa-location-dot"></i> {event.address}</p>
-                  <p><i className="fa-regular fa-clock"></i> {timeFormater(event.date_posted)}</p>
-                  <p><i className="fa fa-user"></i> Hosted by:{event.host ? event.host.hostname : ""}</p>
+                  <p>
+                    <i className="fa-solid fa-location-dot"></i> {event.address}
+                  </p>
+                  <p>
+                    <i className="fa-regular fa-clock"></i>{" "}
+                    {timeFormater(event.date_posted)}
+                  </p>
+                  <p>
+                    <i className="fa fa-user"></i> Hosted by:
+                    {event.host ? event.host.hostname : ""}
+                  </p>
                 </Link>
               </div>
               <div className="voting">
@@ -212,16 +222,15 @@ const CurrentEvents = () => {
           ))
         ) : (
           <div style={{ margin: "20px", boxShadow: "none" }}>
-          <div style={{ textAlign: "center" }}>
-            <span style={{ fontSize: "20px" }}>
-              Oops can't find anything !!!
-             
-            </span>
-            <div className="answer">
-              <img src="/empty.gif" />
+            <div style={{ textAlign: "center" }}>
+              <span style={{ fontSize: "20px" }}>
+                Oops can't find anything !!!
+              </span>
+              <div className="answer">
+                <img src="/empty.gif" />
+              </div>
             </div>
           </div>
-        </div>
         )}
       </div>
     </>

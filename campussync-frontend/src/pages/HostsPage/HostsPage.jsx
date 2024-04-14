@@ -39,7 +39,7 @@ function HostsPage() {
         <button
           onClick={() => setshowOverlay(!showOverlay)}
           className="add-event-btn"
-          style={{ top: "25%" }}
+          style={{ top: "17%" }}
         >
           Be a Host <i className="fa fa-plus"></i>
         </button>
@@ -49,7 +49,7 @@ function HostsPage() {
         {loading ? (
           <img src="loading.gif" alt="Loading..." />
         ) : hosts.length > 0 ? (
-          hosts.map((host) => <HostsCard  key ={host.id} host={host} />)
+          hosts.reverse().map((host) => <HostsCard  key ={host.id} host={host} />)
         ) : (
           <div style={{ marginLeft: "30%", textAlign:"center", boxShadow: "none" }}>
             <div style={{ textAlign: "center" }}>
