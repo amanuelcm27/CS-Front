@@ -30,33 +30,32 @@ function HostsPage() {
       <>
         {showOverlay && (
           <HostOverlay
-            fetchdata={fetchdata}
+            fetchdata={fetchdata} 
             showOverlay={showOverlay}
             setshowOverlay={setshowOverlay}
           />
         )}
-      </>
-      <div style={{ margin: "0px auto" }}>
-        <button onClick={() => setshowOverlay(!showOverlay)} className="">
+
+        <button
+          onClick={() => setshowOverlay(!showOverlay)}
+          className="add-event-btn"
+          style={{ top: "25%" }}
+        >
           Be a Host <i className="fa fa-plus"></i>
         </button>
-      </div>
+      </>
       <Search setHosts={setHosts} />
       <div className="hostspage-hosts">
         {loading ? (
           <img src="loading.gif" alt="Loading..." />
         ) : hosts.length > 0 ? (
-          hosts.map((host) => <HostsCard key={host.id} host={host} />)
+          hosts.map((host) => <HostsCard  key ={host.id} host={host} />)
         ) : (
-          <div
-            style={{
-              marginLeft: "30%",
-              textAlign: "center",
-              boxShadow: "none",
-            }}
-          >
+          <div style={{ marginLeft: "30%", textAlign:"center", boxShadow: "none" }}>
             <div style={{ textAlign: "center" }}>
-              <span style={{ fontSize: "20px" }}>No Hosts found</span>
+              <span style={{ fontSize: "20px" }}>
+                No Hosts found
+              </span>
               <div className="answer">
                 <img src="/empty.gif" />
               </div>
