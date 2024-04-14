@@ -24,7 +24,7 @@ function EventDetails() {
   console.log("thsi is the param id", id);
   useEffect(() => {
     setPostComment({ ...postcomment, event: id });
-  }, [id]);
+  }, []);
 
   useEffect(() => {
     if (id) {
@@ -122,11 +122,7 @@ function EventDetails() {
       form_data.append("event", postcomment.event);
       let url = "https://natty.pythonanywhere.com/event/comments/new/";
       try {
-        const res = await axios.post(url, form_data, {
-          headers: {
-            "content-type": "multipart/form-data",
-          },
-        });
+        const res = await axios.post(url, form_data);
         console.log(res.data);
         fetchComments();
         setPostComment({

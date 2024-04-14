@@ -36,10 +36,6 @@ function App() {
                   <Route path="/event-detail/:id/" element={<EventDetails />}></Route>
                   <Route path="/discussion" element={<Discussion />}></Route>
                   <Route path="/answers/:question_id/" element={<Answer/>}></Route>
-                  <Route
-                    path="/event-detail/1/"
-                    element={<EventDetails />}
-                  ></Route>
                   <Route path="*" element={<Home/>}></Route>
                 </Route>
               </Routes>
