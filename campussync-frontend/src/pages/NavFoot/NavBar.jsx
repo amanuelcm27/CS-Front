@@ -15,7 +15,7 @@ const NavBar = () => {
   };
   useEffect(() => {
     fetchProfileDetail();
-  });
+  },[]);
   return (
     <div className="navbar">
       <div className="navbar-logo">
