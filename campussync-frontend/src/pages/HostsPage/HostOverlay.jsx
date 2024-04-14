@@ -3,7 +3,7 @@ import { useState } from "react";
 import AuthContext from "../../context/AuthContext";
 import axios from "axios";
 import Endpoint from "../../api";
-const HostOverlay = ({ showOverlay, setshowOverlay }) => {
+const HostOverlay = ({ showOverlay, setshowOverlay ,fetchdata}) => {
   const { user } = useContext(AuthContext);
   const [isuploading, setUploading] = useState(false);
 
@@ -41,6 +41,8 @@ const HostOverlay = ({ showOverlay, setshowOverlay }) => {
       const response = await axios.post(`${Endpoint()}user/hosts/`, formData);
       console.log(response);
       setshowOverlay(!showOverlay);
+      fetchdata();
+      
     } catch (e) {
       console.log("error:", e);
     }

@@ -26,6 +26,7 @@
   font-size: 2.2rem;
   color: rgb(0, 0, 0);
   padding: 20px;
+  text-transform: uppercase;
 }
 .signup-form {
   margin: 20px;

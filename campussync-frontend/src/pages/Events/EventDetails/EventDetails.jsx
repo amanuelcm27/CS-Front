@@ -27,10 +27,13 @@ function EventDetails() {
   }, [id]);
 
   useEffect(() => {
-    fetchData();
-    fetchComments();
-    fetchAttendees();
-  }, [id]);
+    if (id) {
+      fetchData();
+      fetchComments();
+      fetchAttendees();
+    }
+
+  }, []);
 
   const fetchData = async () => {
     try {
@@ -199,7 +202,7 @@ function EventDetails() {
           </form>
           <div className="comment-card-container">
             {comment.map((comment) => (
-              <div className="comment-card">
+              <div key={comment.id} className="comment-card">
                 <div style={{ display: "flex" }}>
                   <img
                     src={comment.commentor.profile_pic}

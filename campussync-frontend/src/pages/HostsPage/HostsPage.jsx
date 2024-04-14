@@ -10,20 +10,18 @@ function HostsPage() {
   const [hosts, setHosts] = useState(null);
   const [showOverlay, setshowOverlay] = useState(false);
   const [loading, setLoading] = useState(true);
-
+  const fetchdata = async () => {
+    try {
+      const response = await axios.request(
+        "https://natty.pythonanywhere.com/user/hosts/"
+      );
+      setHosts(response.data);
+      setLoading(false);
+    } catch (error) {
+      console.log("Error fetching data:", error);
+    }
+  };
   useEffect(() => {
-    const fetchdata = async () => {
-      try {
-        const response = await axios.request(
-          "https://natty.pythonanywhere.com/user/hosts/"
-        );
-        console.log(response.data);
-        setHosts(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.log("Error fetching data:", error);
-      }
-    };
     fetchdata();
   }, []);
 
@@ -32,6 +30,7 @@ function HostsPage() {
       <>
         {showOverlay && (
           <HostOverlay
+            fetchdata={fetchdata} 
             showOverlay={showOverlay}
             setshowOverlay={setshowOverlay}
           />
@@ -40,7 +39,7 @@ function HostsPage() {
         <button
           onClick={() => setshowOverlay(!showOverlay)}
           className="add-event-btn"
-          style={{ top: "15%" }}
+          style={{ top: "25%" }}
         >
           Be a Host <i className="fa fa-plus"></i>
         </button>
@@ -50,13 +49,12 @@ function HostsPage() {
         {loading ? (
           <img src="loading.gif" alt="Loading..." />
         ) : hosts.length > 0 ? (
-          hosts.map((host) => <HostsCard host={host} />)
+          hosts.map((host) => <HostsCard  key ={host.id} host={host} />)
         ) : (
           <div style={{ marginLeft: "30%", textAlign:"center", boxShadow: "none" }}>
             <div style={{ textAlign: "center" }}>
               <span style={{ fontSize: "20px" }}>
                 No Hosts found
-
               </span>
               <div className="answer">
                 <img src="/empty.gif" />
